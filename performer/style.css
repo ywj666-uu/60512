@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f1a;
+  color: #fff;
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: #1a1a2e;
+  border-radius: 12px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #A855F7;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+}
+
+.heatmap-section,
+.controls-section {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #ccc;
+}
+
+#heatmapCanvas {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  background: #0a0a14;
+}
+
+.effect-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.effect-btn {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.effect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.effect-btn:active {
+  transform: scale(0.95);
+}
+
+.effect-btn.fireworks {
+  background: linear-gradient(135deg, #FF4757, #FF6B81);
+  color: #fff;
+}
+
+.effect-btn.wave {
+  background: linear-gradient(135deg, #1E90FF, #70A1FF);
+  color: #fff;
+}
+
+.effect-btn.rainbow {
+  background: linear-gradient(135deg, #A855F7, #D946EF);
+  color: #fff;
+}
+
+.top-colors {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.color-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #252540;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}

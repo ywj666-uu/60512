@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#particleCanvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#stats {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+#cheerCount {
+  font-size: 28px;
+  font-weight: bold;
+  color: #A855F7;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>艺人控制台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>🎤 艺人控制台</h1>
+      <div class="stats-bar">
+        <div class="stat">
+          <span class="stat-value" id="totalCheers">0</span>
+          <span class="stat-label">总应援</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="cheersPerMin">0</span>
+          <span class="stat-label">次/分钟</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="onlineCount">0</span>
+          <span class="stat-label">在线观众</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-content">
+      <div class="heatmap-section">
+        <h2>实时应援热力图</h2>
+        <canvas id="heatmapCanvas" width="600" height="300"></canvas>
+      </div>
+
+      <div class="controls-section">
+        <h2>触发全场特效</h2>
+        <div class="effect-buttons">
+          <button class="effect-btn fireworks" data-effect="fireworks">
+            🎆 烟花
+          </button>
+          <button class="effect-btn wave" data-effect="wave">
+            🌊 波浪
+          </button>
+          <button class="effect-btn rainbow" data-effect="rainbow">
+            🌈 彩虹
+          </button>
+        </div>
+
+        <h2>热门颜色</h2>
+        <div id="topColors" class="top-colors"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
